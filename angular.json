@@ -17,7 +17,10 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/matrix-rain-tex-gen",
+            "outputPath": {
+              "base": "docs/",
+              "browser": ""
+            },
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -30,7 +33,7 @@
               "src/assets"
             ],
             "styles": [
-              "node_modules/bootstrap/scss/bootstrap-grid.scss",
+              "node_modules/bootstrap/dist/css/bootstrap.css",
               "node_modules/@nebular/theme/styles/prebuilt/dark.css",
               "src/styles.scss"
             ],
@@ -41,8 +44,8 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "1500kb",
+                  "maximumError": "2mb"
                 },
                 {
                   "type": "anyComponentStyle",
@@ -92,7 +95,7 @@
               "src/assets"
             ],
             "styles": [
-              "node_modules/bootstrap/scss/bootstrap-grid.scss",
+              "node_modules/bootstrap/dist/css/bootstrap.css",
               "node_modules/@nebular/theme/styles/prebuilt/dark.css",
               "src/styles.scss"
             ],
